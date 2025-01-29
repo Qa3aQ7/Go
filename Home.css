@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    display: flex;
+
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nac {
+    background-image: url('https://www.vzsar.ru/i/news/xxl/2019/05/183808.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.nac h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.nac p {
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10px;
+    flex-wrap: wrap;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-image:hover {
+    transform: scale(1.05);
+}
+
+.glav,
+.glav2,
+.glav3,
+.glav4 {
+    background-color: #1e7449;
+    padding: 20px;
+    width: 45%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    color: antiquewhite;
+}
+
+.glav {
+    animation-delay: 0.5s;
+}
+
+.glav2 {
+    animation-delay: 1s;
+}
+
+.glav3 {
+    animation-delay: 0.5s;
+}
+
+.glav4 {
+    animation-delay: 1s;
+}
+
+.glav5 {
+    background-color: #1e7449;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.image {
+    padding: 15px;
+    width: 100%;
+}
+
+.center-button {
+    padding: 10px 20px;
+    background-color: #13ad05;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.center-button:hover {
+    background-color: #05c234;
+}
+
+@keyframes fadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    main {
+        justify-content: center;
+    }
+
+    .glav,
+    .glav2 {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .nac h2 {
+        font-size: 28px;
+    }
+
+    .nac p {
+        font-size: 16px;
+    }
+
+    .glav, .glav2, .glav3, .glav4 {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .glav5 {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .center-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
